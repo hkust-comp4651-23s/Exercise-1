@@ -5,8 +5,9 @@ This is a code Exercise of COMP 4651 23' Spring. We'll get familiar with HDFS th
 ## Environment Setup
 
 ### Docker Installation
-First, follow the prerequisites according to pg.3 of the slides to install and set up docker deamon. Make sure docker deamon is properly started on your device. (It would require at least 2GB of free memory to start, if you don't have enough space locally, follow the appendix to launch aws instance)
+First, follow the prerequisites according to pg.3 of the [slides](https://github.com/hkust-comp4651-23s/Exercise-1/blob/main/files/lab03_Hadoop.pdf) to install and set up docker deamon. Make sure docker deamon is properly started on your device. (It would require at least 2GB of free memory to start, if you don't have enough space locally, follow the appendix to launch aws instance)
 
+### <span id="jump1">Pull Docker Image</span>
 After starting docker deamon, you'll need to download the docker image we've packaged for you with Hadoop service already configured with the following command:
 ``` bash
 $ docker pull qpswwww/quickstarts:v0​
@@ -86,4 +87,32 @@ When you are done, make sure you have committed your code and pushed the repo ba
 ## Appendix
 We also provides you with aws ec2 instances for running docker deamon in case you got some unsolvable problem on your local device (basically on windows machines)
 
-*Update required here*
+### Launch EC2 Instance
+Firstly we need to launch a EC2 instance which will handle the docker service. 
+To achieve this, you will need to launch a EC2 instance through AWS learner Lab, which could be quite familiar for you.
+
+Here you'll need to luanch an instance of **t2.large** and choose **16GB** volume, as shown below:
+
+![avatar](files/images/t2.large.png)
+![avatar](files/images/volume.png)
+
+You are now ready to launch your instance.
+
+
+## Modify Security Group 
+After successfully launched your instance, you should be able to connect through ssh and after adding the configurations in `~/.ssh/config`, you will be able to play with the code inside with the IDE you are familiar with.(e.g., with [VSCode Remote ssh](https://code.visualstudio.com/docs/remote/ssh))
+Also, you should follow the instructions: [Installing Docker on Amazon Linux 2](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-container-image.html) to install and activate docker on this instance.
+
+Before getting back to the regular routine, one important thing you should also complete is to modify the security group of your instance so that you can access to Hadoop Web UI from your local device.
+
+Go to the instance page and finde your ec2 instance (e.g., in this case *lab03-exercise-test*), make sure you hopen the TCP access of port **50070** which is the Hadoop web UI port.
+![avatar](files/images/50070.png)
+
+If not, press the corresponding security group, which is in the green box, press Actions and Edit inbound rules.
+![avatar](files/images/inbound.png)
+Then add a rule as shown below, save rules, you will be ready to start again from [here](#jump1)!
+![avatar](files/images/add.png)
+
+
+[Maven]: https://maven.apache.org
+
