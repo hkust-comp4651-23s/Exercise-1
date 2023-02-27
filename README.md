@@ -29,7 +29,7 @@ $ docker container ls
 $ sudo docker exec -it YOUR_CONTAINER_ID /bin/bash
 ```
 
-### Restrt Service
+### Restart Service
 Use the following command to restart the service we already deployed:​
 ``` bash
 $ sudo service hadoop-yarn-resourcemanager restart​
