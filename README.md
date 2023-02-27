@@ -82,3 +82,8 @@ If your implementation is correct, you will find a `cp-hkust.txt` file in your c
 When you are done, make sure you have committed your code and pushed the repo back to origin.
 
 
+
+## Appendix
+We also provides you with aws ec2 instances for running docker deamon in case you got some unsolvable problem on your local device (basically on windows machines)
+
+*Update required here*
