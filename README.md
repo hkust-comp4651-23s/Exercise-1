@@ -10,7 +10,7 @@ First, follow the prerequisites according to pg.3 of the [slides](./files/lab03_
 ### <span id="jump1">Pull Docker Image</span>
 After starting docker deamon, you'll need to download the docker image we've packaged for you with Hadoop service already configured with the following command:
 ``` bash
-$ docker pull qpswwww/quickstarts:v0​
+$ docker pull qpswwww/quickstarts:v0
 ```
 
 ### Code Cloning
@@ -33,9 +33,9 @@ $ sudo docker exec -it YOUR_CONTAINER_ID /bin/bash
 ### Restart Service
 Use the following command to restart the service we already deployed:​
 ``` bash
-$ sudo service hadoop-yarn-resourcemanager restart​
+$ sudo service hadoop-yarn-resourcemanager restart
 
-$ sudo service hadoop-hdfs-namenode restart​
+$ sudo service hadoop-hdfs-namenode restart
 
 $ sudo service hadoop-hdfs-datanode restart
 ```
