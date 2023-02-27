@@ -5,7 +5,7 @@ This is a code Exercise of COMP 4651 23' Spring. We'll get familiar with HDFS th
 ## Environment Setup
 
 ### Docker Installation
-First, follow the prerequisites according to pg.3 of the [slides](https://github.com/hkust-comp4651-23s/exercise-1/blob/main/files/lab03_Hadoop.pdf) to install and set up docker deamon. Make sure docker deamon is properly started on your device. (It would require at least 2GB of free memory to start, if you don't have enough space locally, follow the appendix to launch aws instance)
+First, follow the prerequisites according to pg.3 of the [slides](./files/lab03_Hadoop.pdf) to install and set up docker deamon. Make sure docker deamon is properly started on your device. (It would require at least 2GB of free memory to start, if you don't have enough space locally, follow the appendix to launch aws instance)
 
 ### <span id="jump1">Pull Docker Image</span>
 After starting docker deamon, you'll need to download the docker image we've packaged for you with Hadoop service already configured with the following command:
